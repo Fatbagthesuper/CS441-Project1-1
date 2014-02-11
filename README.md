@@ -22,8 +22,7 @@ Date: 2/11/2014
 ----------------
 	
 #
-# To compile the program using 'make' (optional)
-# (Do not type the 'shell$')
+# To compile the program using 'make' (optional) (Do not type the 'shell$')
 #
 shell$ make
 gcc -o finput -Wall -g -O0 finput.c
@@ -31,8 +30,7 @@ gcc -o calc calc.c -Wall -g -O0 -lm
 shell$
 
 #
-# To compile the program using GCC 
-# (Do not type the 'shell$')
+# To compile the program using GCC (Do not type the 'shell$')
 #
 shell$ gcc -o finput finput.c -Wall -g -O0 -lm
 shell$ gcc -o calc calc.c -Wall -g -O0 -lm
