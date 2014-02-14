@@ -1,4 +1,5 @@
 /*
+ * Support.h
  * Tyler Nickel and Nathaniel Harris
  * Feb. 13, 2013
  *
@@ -8,9 +9,9 @@
 #ifndef SUPPORT_H
 #define SUPPORT_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>	//printf, fprintf
+#include <stdlib.h> //malloc
+#include <string.h> //strcmp, strdup, strlen
 
 /******************************
  * Defines
@@ -27,8 +28,6 @@ struct job_t {
     char * full_command;
     int argc;
     char **argv;
-    //first split token, malloc'd in split_into_args
-    char * Name;
     //Background Process Flag
     int BProcess;
 };
