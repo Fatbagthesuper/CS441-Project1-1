@@ -1,14 +1,15 @@
 /*
+ * OurShell.h
  * Tyler Nickel and Nathaniel Harris
  * Feb. 13, 2013
  *
  * CS441/541: Project 1 Part 1
  *
  */
-#ifndef MYSHELL_H
-#define MYSHELL_H
+#ifndef OURSHELL_H
+#define OURSHELL_H
 
-#include "support.h"
+#include "Support.h"
 
 /* For fork, exec, sleep */
 #include <sys/types.h>
@@ -37,4 +38,4 @@
  ******************************/
 
 
-#endif /* MYSHELL_H */
+#endif /* OURSHELL_H */
