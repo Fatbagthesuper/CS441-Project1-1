@@ -1,5 +1,5 @@
 /* OurShell.c
- * Tyler Nickel and Nathaniel Harris
+ * Tyler Nickel and Nathanial Harris
  * Feb. 13, 2013
  *
  * CS441/541: Project 1 Part 1
