@@ -1,37 +1,27 @@
+# Tyler Nickel and Nathanial Harris
+# Feb. 13, 2013
 #
-# [MakeFile]
-# [Tyler Nickel and Nathan Harris]
-# [2/11/2014]
+# CS441/541: Project 1 Part 1
 #
+#####################################################################
+#
+# Type "make" or "make myshell" to compile your code
+# 
+# Type "make clean" to remove the executable (and any object files)
+#
+#####################################################################
+
 CC=gcc
-CFLAGS=-Wall -g -O0 -lm
+CFLAGS=-Wall -g
 
-#
-# List all of the binary programs you want to build here
-# Separate each program with a single space
-#
-PROGS=finput calc
+all: myshell
 
-#
-# First target: all
-# Compile all programs
-#
-all: $(PROGS)
+myshell: myshell.c myshell.h support.o
+	$(CC) -o myshell myshell.c support.o $(CFLAGS)
 
-#
-# Compile Program 1
-#
-finput: finput.c support.h
-	$(CC) -o finput finput.c $(CFLAGS)
-calc: calc.c calcsupport.h support.h
-	$(CC) -o calc calc.c $(CFLAGS)
-#
-# Add other targets here..
-#
+support.o: support.h support.c
+	$(CC) -c -o support.o support.c $(CFLAGS)
 
-#
-# Cleanup the files that we have created
-#
 clean:
-	$(RM) $(PROGS)
-	$(RM) -rf *.o *.dSYM
+	$(RM) myshell *.o
+	$(RM) -rf *.dSYM
