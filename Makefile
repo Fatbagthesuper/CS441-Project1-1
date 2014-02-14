@@ -17,11 +17,8 @@ CFLAGS=-Wall -g
 
 all: OurShell
 
-myshell: OurShell.c OurShell.h 
+OurShell: OurShell.c OurShell.h Support.c Support.h
 	$(CC) -o OurShell OurShell.c  $(CFLAGS)
-
-Support.o: Support.h Support.c
-	$(CC) -c -o Support.o Support.c $(CFLAGS)
 
 clean:
 	$(RM) OurShell *.o
