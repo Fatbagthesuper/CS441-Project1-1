@@ -1,3 +1,4 @@
+# MakeFile
 # Tyler Nickel and Nathanial Harris
 # Feb. 13, 2013
 #
@@ -5,7 +6,7 @@
 #
 #####################################################################
 #
-# Type "make" or "make myshell" to compile your code
+# Type "make" or "make OurShell" to compile your code
 # 
 # Type "make clean" to remove the executable (and any object files)
 #
@@ -16,8 +17,8 @@ CFLAGS=-Wall -g
 
 all: OurShell
 
-myshell: OurShell.c OurShell.h Support.o
-	$(CC) -o myshell myshell.c support.o $(CFLAGS)
+myshell: OurShell.c OurShell.h 
+	$(CC) -o OurShell OurShell.c  $(CFLAGS)
 
 Support.o: Support.h Support.c
 	$(CC) -c -o Support.o Support.c $(CFLAGS)
