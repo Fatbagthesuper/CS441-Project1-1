@@ -27,6 +27,10 @@ struct job_t {
     char * full_command;
     int argc;
     char **argv;
+    //first split token, malloc'd in split_into_args
+    char * Name;
+    //Background Process Flag
+    int BProcess;
 };
 typedef struct job_t job_t;
 
