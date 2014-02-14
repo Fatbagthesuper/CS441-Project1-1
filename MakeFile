@@ -14,14 +14,14 @@
 CC=gcc
 CFLAGS=-Wall -g
 
-all: myshell
+all: OurShell
 
-myshell: myshell.c myshell.h support.o
+myshell: OurShell.c OurShell.h Support.o
 	$(CC) -o myshell myshell.c support.o $(CFLAGS)
 
-support.o: support.h support.c
-	$(CC) -c -o support.o support.c $(CFLAGS)
+Support.o: Support.h Support.c
+	$(CC) -c -o Support.o Support.c $(CFLAGS)
 
 clean:
-	$(RM) myshell *.o
+	$(RM) OurShell *.o
 	$(RM) -rf *.dSYM
